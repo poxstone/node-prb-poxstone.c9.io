@@ -1,30 +1,18 @@
 var express = require('express');
 var app = express();
+var fs = require('fs');
 
+//load teh form file html
+var form_html;
+fs.readFile(__dirname +'/form.html',function(err,data){
+    form_html = data.toString();
+});
+
+//to get url form
 app.get(/\/forms?/,function(req,res){
-    var html='<!DOCUTYPE html>\
-        <html lang="eng">\
-            <head>\
-                <meta charset="utf-8">\
-                <title>Docutype</title>\
-            </head>\
-            <body>\
-                <form method="get" action="">\
-                    <input type="submit" name="nombre" value="get-hola"/>\
-                </form>\
-                <form method="post" action="">\
-                    <input type="submit" name="nombre" value="post-hola"/>\
-                </form>\
-                <form method="put" action="">\
-                    <input type="submit" name="nombre" value="put-hola"/>\
-                </form>\
-                <form method="delete" action="">\
-                    <input type="submit" name="nombre" value="delete-hola"/>\
-                </form>\
-            </body>\
-        </html>';
-    res.send(html);
-    //console.log('req',req);
+    
+    res.send(form_html);
+    //console.log('req',req);   
 });
 app.get('/',function(req,res){
     res.send('Hello world');
