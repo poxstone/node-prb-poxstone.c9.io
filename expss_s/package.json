@@ -1,0 +1,14 @@
+{
+  "name": "expss_s",
+  "version": "1.0.0",
+  "description": "express mini",
+  "main": "app.js",
+  "scripts": {
+    "test": "console.log('express mini')"
+  },
+  "keywords": [
+    "mini"
+  ],
+  "author": "poxstone",
+  "license": "ISC"
+}
