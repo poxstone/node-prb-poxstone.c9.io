@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    - var classes = ['p1','p2']
+    h1= title
+    p Welcome to #{title}
+    a: img.lola(src="/images/Pluto.jpg",width="100px")
+    form(method="post",action="/lola")
+        input(type="text",name="envio")
+        hr
+        each val, index in {1:'one',2:'two',3:'three'}
+            label #{index}: #{val}
+                input(type="checkbox",name="multiple",value=val)
+        hr
+        input(type="submit",value="envio")

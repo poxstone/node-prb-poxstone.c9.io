@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    table(border="1",cellpadding="4px",
+        style={
+            'border-radius':'4px',
+            'border':'1px solid red',
+            'font-family': 'Lucida,arial,sans-serif',
+            'border-collapse':'collapse',})
+        thead: tr(style={'text-align': 'left'})
+            th #
+            th tit.
+            th cant.
+        tbody
+            each val in [1,2,3,4,5]
+                tr
+                    td #{val}
+                    td descripcion #{val}
+                    td 12
+
+    ul
+        -for (i=0; i<3;i++){
+            li #{i}
+        -}
+
+    ul
+      each val, index in {1:'one',2:'two',3:'three'}
+        li= index + ': ' + val
+    
+    if posts
+        ul#coment
+            each inp, index in posts
+                li= index + ': ' + inp
+
+

@@ -5,6 +5,7 @@ var fs = require('fs');
 //load teh form file html
 var form_html;
 fs.readFile(__dirname +'/form.html',function(err,data){
+    if (err) console.log(err);
     form_html = data.toString();
 });
 
