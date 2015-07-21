@@ -13,3 +13,7 @@ block content
                 input(type="checkbox",name="multiple",value=val)
         hr
         input(type="submit",value="envio")
+    form(method="post",action="/json")
+        input(type="submit",name="envio",value="enviado json")
+    form(method="post",action="/jsonp")
+        input(type="submit",name="envio",value="enviado jsonp")
