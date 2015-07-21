@@ -6,8 +6,11 @@ router.get('/', function(req, res, next) {
 	res.render('index', { title: 'Express', body_css : 'home' });
 });
 
-router.get(/lola?/, function(req, res, next) {
-	res.render('lola', { title: 'perro lola', body_css : 'interna' });
+//router.get(/lola?(\/:id)?/, function(req, res, next) {
+router.get('/lola(/:id)?/', function(req, res, next) {
+	res.render('lola', { title: 'perro lola', body_css : 'internas',params:req.params });
+	console.log('originalurl: ',req.originalUrl);
+	console.log('params: ',req.params.id);
 });
 
 router.post('/lola', function(req, res, next) {
@@ -33,5 +36,6 @@ router.post('/jsonp', function(req, res, next) {
 		number : '8',
 	});
 });
+
 
 module.exports = router;

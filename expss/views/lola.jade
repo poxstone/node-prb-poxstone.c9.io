@@ -31,7 +31,12 @@ block content
     
     if posts
         ul#coment
-            each inp, index in posts
-                li= index + ': ' + inp
+            each val, index in posts
+                li= index + ': ' + val
+    
+    if params
+        ol
+            each val, index in params
+                p= index + ': ' + val
 
 
