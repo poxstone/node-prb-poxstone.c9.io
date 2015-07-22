@@ -1,0 +1,5 @@
+2015-07-22T23:14:40.461+0000 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory /home/ubuntu/workspace/data/data not found., terminating
+2015-07-22T23:14:40.461+0000 I CONTROL  [initandlisten] dbexit:  rc: 100
+2015-07-22T23:14:48.088+0000 I CONTROL  ***** SERVER RESTARTED *****
+2015-07-22T23:14:48.100+0000 I STORAGE  [initandlisten] exception in initAndListen: 29 Data directory /home/ubuntu/workspace/data/data not found., terminating
+2015-07-22T23:14:48.100+0000 I CONTROL  [initandlisten] dbexit:  rc: 100

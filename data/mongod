@@ -1,0 +1,1 @@
+mongod --config "/home/ubuntu/workspace/mongod.conf" --bind_ip=$IP --dbpath=data --nojournal --rest "$@"
