@@ -9,8 +9,6 @@ router.get('/', function(req, res, next) {
 //router.get(/lola?(\/:id)?/, function(req, res, next) {
 router.get('/lola(/:id)?/', function(req, res, next) {
 	res.render('lola', { title: 'perro lola', body_css : 'internas',params:req.params });
-	console.log('originalurl: ',req.originalUrl);
-	console.log('params: ',req.params.id);
 });
 
 router.post('/lola', function(req, res, next) {
